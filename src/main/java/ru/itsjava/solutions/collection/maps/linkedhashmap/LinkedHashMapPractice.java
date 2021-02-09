@@ -1,6 +1,9 @@
 package ru.itsjava.solutions.collection.maps.linkedhashmap;
 
+import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class LinkedHashMapPractice {
 
@@ -16,10 +19,10 @@ public class LinkedHashMapPractice {
         linkedHashMap.put("four", 4);
         linkedHashMap.put("five", 5);
 
-        var set = linkedHashMap.entrySet();
-        var iterator = set.iterator();
+        Set<Map.Entry<String, Integer>> set = linkedHashMap.entrySet();
+        Iterator<Map.Entry<String, Integer>> iterator = set.iterator();
         while (iterator.hasNext()) {
-            var item = iterator.next();
+            Map.Entry<String, Integer> item = iterator.next();
             System.out.println("Key = " + item.getKey() + " Value = " + item.getValue());
         }
     }
